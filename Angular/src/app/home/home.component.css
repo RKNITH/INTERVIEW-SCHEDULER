@@ -1,0 +1,16 @@
+.container{
+	text-align: center;
+	padding-top: 10px;
+	height: 100vh;
+}
+.container .btn-holder{
+	position: fixed;
+	right: 40px;
+	bottom: 30px;
+	z-index: 100;
+}
+.container h1{
+	background-color: black;
+	color: white;
+	padding: 10px;
+}

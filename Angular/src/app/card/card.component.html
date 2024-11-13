@@ -1,0 +1,13 @@
+<div class="card pt-4 mb-2">
+	<p class="text-align-left">Date : {{this.date}}</p>
+	<p class="text-align-left">Start Time : {{this.startTime}}</p>
+	<p class="text-align-left">End Time : {{this.endTime}}</p>
+	<p class="text-align-left">Candidates : </p>
+	<mat-chip-list aria-label="Users" class="p-20 mb-1">
+		<mat-chip *ngFor="let user of data['users']" color="{{user.color}}" selected>{{user.name}}</mat-chip>
+	</mat-chip-list>
+	<div class="row m-1 pb-2 justify-content-center">
+		<button class="btn btn-success text-white" (click)="this.updateInterview()" *ngIf="check()">Edit</button>
+		<button class="btn btn-danger text-white" (click)="this.deleteInterview()">Delete</button>
+	</div>
+</div>

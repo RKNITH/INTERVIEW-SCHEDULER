@@ -1,0 +1,12 @@
+.text-align-left{
+	text-align: left;
+	padding-left: 20px;
+}
+button{
+	width: 40%;
+	margin: 0 10px;
+}
+.p-20{
+	padding-left: 20px!important;
+	padding-right: 20px!important;
+}

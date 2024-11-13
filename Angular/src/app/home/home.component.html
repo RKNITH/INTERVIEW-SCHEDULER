@@ -1,0 +1,10 @@
+<div class="container">
+	<h1 class="h1">Interview Scheduler</h1>
+	<div class="row mt-4 justify-content-between">
+		<div *ngFor="let interview of this.interviews" class="past col-lg-3 col-md-4 mt-4" [ngClass]="[interview.tense.toLowerCase()]">
+			<h2>{{interview.tense}} Interview ({{interview.cards.length}})</h2>
+			<app-card *ngFor="let card of interview.cards" [card] = "card"></app-card>
+		</div>
+	</div>
+	<button class="btn btn-dark text-white btn-holder" (click)="createInterview()">Create An Interview</button>
+</div>

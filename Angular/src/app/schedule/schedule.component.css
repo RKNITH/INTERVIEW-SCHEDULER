@@ -1,0 +1,40 @@
+.container{
+	width: 50%;
+	text-align: center;
+	padding-top: 10px;
+	height: 100vh;
+}
+.container .form{
+	background-color: white;
+	margin-top: 5%;
+}
+.container .form h1{
+	padding: 20px 0;
+	background-color: black;
+	color: white;
+	margin: auto auto 50px;
+}
+.width-80{
+	width: 80%;
+	margin: 8px;
+}
+.m-2{
+	margin: 4px!important;
+}
+.margin-20{
+	margin: 20px 60px;
+}
+.container .btn-holder{
+	position: fixed;
+	right: 40px;
+	bottom: 30px;
+	z-index: 100;
+}
+@media (max-width: 1000px) {
+	.container{
+		width: 80%;
+	}
+	.container .form{
+		margin-top: 3%;
+	}
+}

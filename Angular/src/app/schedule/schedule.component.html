@@ -1,0 +1,31 @@
+<div class="container">
+	<form class="form" onsubmit="return false">
+		<h1>{{this.type}} An Interview</h1>
+		<mat-form-field appearance="fill" class="width-80">
+			<mat-label>Choose a date</mat-label>
+			<input matInput [matDatepicker]="picker" id="date" >
+			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+		<br/>
+		<mat-form-field appearance="fill" class="width-80">
+			<mat-label>Start Time : </mat-label>
+			<input matInput placeholder="Start Time" type="time" id="startTime" >
+		</mat-form-field>
+		<br/>
+		<mat-form-field appearance="fill" class="width-80">
+			<mat-label>End Time : </mat-label>
+			<input matInput placeholder="End Time" type="time" id="endTime" >
+		</mat-form-field>
+		<br>
+		<div class="margin-20">
+			<mat-chip-list aria-label="Users" selectable multiple id="chip-list">
+				<mat-chip #c="matChip" *ngFor="let user of this.users" [value]="user" class="m-2" (click)="toggleSelection(c)" id="user{{user._id}}" (select)="user.select">
+					{{user.name}}
+				</mat-chip>
+			</mat-chip-list>
+		</div>
+		<button type="submit" class="btn btn-info text-white m-4" (click)="this.schedule()">{{this.type}}</button>
+	</form>
+	<button class="btn btn-dark text-white btn-holder" routerLink="/">See All Interview</button>
+</div>
